@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leo Nation Server</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 40px 20px 20px;
+      background-color: #2c2c2c;
+      border-bottom: 4px solid #3d3d3d;
+    }
+    img.logo {
+      width: 220px;
+      height: auto;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 3.5rem;
+      margin: 20px 0 10px;
+      color: #32cd32;
+      text-shadow: 2px 2px #000;
+    }
+    p.admin {
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section h2 {
+      color: #00ffcc;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    section p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    a.btn, button.btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    a.btn:hover, button.btn:hover {
+      background-color: #1da851;
+    }
+    input, select {
+      padding: 10px;
+      font-size: 1rem;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 80%;
+      max-width: 300px;
+    }
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+      background-color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="https://chatgpt.com/backend-api/public_content/enc/eyJpZCI6Im1fNjg1NjQ5Y2Q5ZGJjODE5MTgyMzQ0NDQ5ODZiMDhiMzY6ZmlsZV8wMDAwMDAwMGMxY2M2MjJmYmQxODFmMTBiNTZhZTMzNyIsInRzIjoiNDg2MjQ1IiwicCI6InB5aSIsInNpZyI6ImRmNTFmNmEzNDYwNjQ4NjRmZTFkOTY5NTExYjQ3OTYyN2U5Yjk0MDliNzc0YTNhOTJlN2I1NDc3YThiMmYyZGUiLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsfQ==" alt="Leo Nation Logo" />
+    <h1>LEO NATION</h1>
+    <p class="admin">Admin: <strong>LEO GAMING3071</strong></p>
+  </header>  <section>
+    <h2>Tentang Server</h2>
+    <p>Leo Nation adalah server Minecraft yang dibuat dengan semangat komunitas dan petualangan. Server ini terbuka untuk semua pemain yang ingin membangun, menjelajah, dan bersenang-senang bersama.</p>
+    <a class="btn" href="https://chat.whatsapp.com/EBBbvrsmYDgCGXZULiScK1" target="_blank">Gabung Grup WhatsApp</a>
+  </section>  <section>
+    <h2>Tujuan Dibuat</h2>
+    <p>Server ini dibuat untuk menyatukan pemain Minecraft dari berbagai tempat agar bisa bermain bareng, saling membantu, dan menciptakan dunia Minecraft yang seru dan kreatif. Kami ingin menciptakan komunitas yang ramah, aktif, dan menyenangkan!</p>
+  </section>  <section>
+    <h2>Beli Rank</h2>
+    <p>Pilih rank dan masukkan gamertag kamu. Setelah itu klik tombol kirim untuk menghubungi admin lewat WhatsApp.</p>
+    <form onsubmit="kirimPesan(); return false;">
+      <select id="rank">
+        <option value="1">Rank 1 - Rp1.000</option>
+        <option value="2">Rank 2 - Rp2.000</option>
+        <option value="3">Rank 3 - Rp3.000</option>
+        <option value="4">Rank 4 - Rp4.000</option>
+        <option value="5">Rank 5 - Rp5.000</option>
+      </select><br />
+      <input type="text" id="gamertag" placeholder="Masukkan gamertag kamu" required /><br />
+      <button class="btn" type="submit">Kirim</button>
+    </form>
+  </section>  <footer>
+    &copy; 2025 Leo Nation Minecraft Server. All rights reserved.<br>
+    This website created by <strong>AldricAS</strong>
+  </footer>  <script>
+    function kirimPesan() {
+      const gamertag = document.getElementById("gamertag").value;
+      const rank = document.getElementById("rank").value;
+      const harga = rank * 1000;
+      const noAdmin = "6281361245418";
+      const pesan = `Halo Admin, saya ingin membeli Rank ${rank} (Rp${harga.toLocaleString()}) untuk gamertag ${gamertag}`;
+      const link = `https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`;
+      window.open(link, '_blank');
+    }
+  </script></body>
+</html>
