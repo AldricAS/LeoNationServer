@@ -46,6 +46,14 @@
       font-size: 1.2rem;
       line-height: 1.6;
     }
+    ul.rank-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      text-align: left;
+      display: inline-block;
+    }
     a.btn, button.btn {
       display: inline-block;
       margin-top: 20px;
@@ -102,19 +110,42 @@
     <h2>Tujuan Dibuat</h2>
     <p>Server ini dibuat untuk menyatukan pemain Minecraft dari berbagai tempat agar bisa bermain bareng, saling membantu, dan menciptakan dunia Minecraft yang seru dan kreatif. Kami ingin menciptakan komunitas yang ramah, aktif, dan menyenangkan!</p>
   </section>  <section>
+    <h2>Harga Rank di Server</h2>
+    <p>Semua rank berlaku selama 30 hari / 1 bulan</p>
+    <ul class="rank-list">
+      <li><strong>SUPPORTER</strong> = 5.000 RIBU</li>
+      <li><strong>VIP</strong> = 10.000 RIBU</li>
+      <li><strong>MVP</strong> = 20.000 RIBU</li>
+      <li><strong>ELITE</strong> = 30.000 RIBU</li>
+      <li><strong>MASTER</strong> = 40.000 RIBU</li>
+      <li><strong>LEGENDS</strong> = 50.000 RIBU</li>
+      <li><strong>MYTHIC</strong> = 60.000 RIBU</li>
+      <li><strong>ULTRA</strong> = 70.000 RIBU</li>
+      <li><strong>VENOM</strong> = 80.000 RIBU</li>
+      <li><strong>IMMORTAL</strong> = 90.000 RIBU</li>
+      <li><strong>MICHAEL</strong> = 100.000 RIBU</li>
+    </ul>
+  </section>  <section>
     <h2>Beli Rank</h2>
     <p>Pilih rank dan masukkan gamertag kamu. Setelah itu klik tombol kirim untuk menghubungi admin lewat WhatsApp.</p>
     <form onsubmit="kirimPesan(); return false;">
       <select id="rank">
-        <option value="1">Rank 1 - Rp1.000</option>
-        <option value="2">Rank 2 - Rp2.000</option>
-        <option value="3">Rank 3 - Rp3.000</option>
-        <option value="4">Rank 4 - Rp4.000</option>
-        <option value="5">Rank 5 - Rp5.000</option>
+        <option value="SUPPORTER">SUPPORTER - Rp5.000</option>
+        <option value="VIP">VIP - Rp10.000</option>
+        <option value="MVP">MVP - Rp20.000</option>
+        <option value="ELITE">ELITE - Rp30.000</option>
+        <option value="MASTER">MASTER - Rp40.000</option>
+        <option value="LEGENDS">LEGENDS - Rp50.000</option>
+        <option value="MYTHIC">MYTHIC - Rp60.000</option>
+        <option value="ULTRA">ULTRA - Rp70.000</option>
+        <option value="VENOM">VENOM - Rp80.000</option>
+        <option value="IMMORTAL">IMMORTAL - Rp90.000</option>
+        <option value="MICHAEL">MICHAEL - Rp100.000</option>
       </select><br />
       <input type="text" id="gamertag" placeholder="Masukkan gamertag kamu" required /><br />
       <button class="btn" type="submit">Kirim</button>
     </form>
+    <p style="margin-top: 20px; color: #ffcc00;"><strong>BAYAR PERBULAN / 30 HARI 1X</strong></p>
   </section>  <footer>
     &copy; 2025 Leo Nation Minecraft Server. All rights reserved.<br>
     This website created by <strong>AldricAS</strong>
@@ -122,11 +153,25 @@
     function kirimPesan() {
       const gamertag = document.getElementById("gamertag").value;
       const rank = document.getElementById("rank").value;
-      const harga = rank * 1000;
+      const hargaList = {
+        SUPPORTER: 5000,
+        VIP: 10000,
+        MVP: 20000,
+        ELITE: 30000,
+        MASTER: 40000,
+        LEGENDS: 50000,
+        MYTHIC: 60000,
+        ULTRA: 70000,
+        VENOM: 80000,
+        IMMORTAL: 90000,
+        MICHAEL: 100000
+      };
+      const harga = hargaList[rank];
       const noAdmin = "6281361245418";
       const pesan = `Halo Admin, saya ingin membeli Rank ${rank} (Rp${harga.toLocaleString()}) untuk gamertag ${gamertag}`;
       const link = `https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`;
       window.open(link, '_blank');
     }
   </script></body>
+</html>
 </html>
