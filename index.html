@@ -151,43 +151,45 @@
   </section>  <footer>
     &copy; 2025 Leo Nation Minecraft Server. All rights reserved.<br>
     This website created by <strong>AldricAS</strong>
-  </footer>  <script>
-    function kirimPesan() {
-      const gamertag = document.getElementById("gamertag").value;
-      const rank = document.getElementById("rank").value;
-      const hargaList = {
-        SUPPORTER: 5000,
-        VIP: 10000,
-        MVP: 20000,
-        ELITE: 30000,
-        MASTER: 40000,
-        LEGENDS: 50000,
-        MYTHIC: 60000,
-        ULTRA: 70000,
-        VENOM: 80000,
-        IMMORTAL: 90000,
-        MICHAEL: 100000
-      };
-      const harga = hargaList[rank];
-      const noAdmin = "6281361245418";
-      const pesan = `Halo Admin, saya ingin membeli Rank ${rank} (Rp${harga.toLocaleString()}) untuk gamertag ${gamertag}`;
-      const link = `https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`;
-      window.open(link, '_blank');
-    },
+  </footer> 
+<script>
+  function kirimPesan() {
+    const gamertag = document.getElementById("gamertag").value;
+    const rank = document.getElementById("rank").value;
+    const hargaList = {
+      SUPPORTER: 5000,
+      VIP: 10000,
+      MVP: 20000,
+      ELITE: 30000,
+      MASTER: 40000,
+      LEGENDS: 50000,
+      MYTHIC: 60000,
+      ULTRA: 70000,
+      VENOM: 80000,
+      IMMORTAL: 90000,
+      MICHAEL: 100000
+    };
+    const harga = hargaList[rank];
+    const noAdmin = "6281361245418";
+    const pesan = `Halo Admin, saya ingin membeli Rank ${rank} (Rp${harga.toLocaleString()}) untuk gamertag ${gamertag}`;
+    const link = `https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`;
+    window.open(link, '_blank');
+  }
+</script>
 
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/685668296944b71916207eb8/1iu8odovl';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/685668296944b71916207eb8/1iu8odovl';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
   })();
-  </script>
-  <!--End of Tawk.to Script-->
+</script>
+<!--End of Tawk.to Script-->
 
   </body>
 </html>
